@@ -1,0 +1,21 @@
+<h3>Charting data</h3>
+
+<div #containerRef class="charting-data">
+  @if (historicalData() | async; as historicalData) {
+    <ngx-charts-line-chart
+      [view]="[containerRef.offsetWidth, 400]"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [results]="historicalData"
+      >
+    </ngx-charts-line-chart>
+  } @else {
+    <div class="charting-data-loading">
+      Loading...
+    </div>
+  }
+</div>

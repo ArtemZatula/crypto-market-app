@@ -1,0 +1,27 @@
+<div class="market-data">
+  <h3>Market data</h3>
+  <div class="market-data-details">
+    @if (isWsConnected()) {
+      @if (realTimeData$ | async; as realTimeData) {
+        <div>
+          <span class="label">Symbol:</span>
+          <span class="value">{{ realTimeData.symbol_id  }}</span>
+        </div>
+        <div>
+          <span class="label">Price:</span>
+          <span class="value">{{ realTimeData.price }}</span>
+        </div>
+        <div>
+          <span class="label">Time:</span>
+          <span class="value">{{ realTimeData.time_exchange | date: 'medium' }}</span>
+        </div>
+      } @else {
+        No data...
+      }
+    } @else {
+      Connecting...
+    }
+  </div>
+</div>
+
+

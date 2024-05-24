@@ -1,0 +1,26 @@
+.market-data, .charting-data {
+  margin-top: 20px;
+}
+
+.market-data h2, .charting-data h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.market-data-details {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--gray-400);
+  padding: 20px 30px;
+  border-radius: 4px;
+}
+
+.market-data-details div {
+  flex: 1;
+  text-align: center;
+}
+
+.label {
+  display: block;
+  color: var(--gray-700);
+}
