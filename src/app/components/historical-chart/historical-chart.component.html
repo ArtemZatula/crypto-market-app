@@ -1,17 +1,22 @@
 <h3>Charting data</h3>
 
 <div #containerRef class="charting-data">
+  <select [formControl]="cryptoYearFormControl">
+    @for (year of cryptoYears; track year) {
+      <option [value]="year">{{ year }}</option>
+    }
+  </select>
+
   @if (historicalData() | async; as historicalData) {
     <ngx-charts-line-chart
       [view]="[containerRef.offsetWidth, 400]"
-      [showXAxisLabel]="showXAxisLabel"
-      [showYAxisLabel]="showYAxisLabel"
-      [xAxis]="showXAxis"
-      [yAxis]="showYAxis"
-      [xAxisLabel]="xAxisLabel"
-      [yAxisLabel]="yAxisLabel"
-      [results]="historicalData"
-      >
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxis]="true"
+      [yAxis]="true"
+      xAxisLabel="Date"
+      yAxisLabel="Price"
+      [results]="historicalData">
     </ngx-charts-line-chart>
   } @else {
     <div class="charting-data-loading">

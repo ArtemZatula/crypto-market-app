@@ -17,9 +17,9 @@ import { HistoricalChartComponent } from './components/historical-chart/historic
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  symbolFormControl = new FormControl<string>('BITSTAMP_SPOT_BTC_USD');
   private cryptoService = inject(CryptoService);
   private destroyRef = inject(DestroyRef);
+  symbolFormControl = new FormControl<string>('COINBASE_SPOT_BTC_USD');
   cryptos = cryptoCurrencies;
 
   private subscribe(): void {

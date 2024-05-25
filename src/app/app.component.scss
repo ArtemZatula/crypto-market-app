@@ -46,24 +46,3 @@
   font-style: italic;
   margin-bottom: 20px;
 }
-
-.header select {
-  width: fit-content;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: 1px solid var(--gray-400);
-  border-radius: 4px;
-  outline: none;
-}
-
-.header button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: 1px solid var(--gray-400);
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.header button:hover {
-  background-color: #e0e0e0;
-}
